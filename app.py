@@ -2,7 +2,7 @@ from flask import Flask, render_template, Response
 import cv2
 
 app = Flask(__name__)
-port = 5000
+# port = 8000
 camera = cv2.VideoCapture(0)
 
 def gen_frames():
@@ -30,4 +30,5 @@ def index():
 
 if __name__ == '__main__':
     # app.run(host='0.0.0.0')
-    app.run(host="0.0.0.0", port=port)
+    app.run()
+    # app.run(host="0.0.0.0", port=port)
